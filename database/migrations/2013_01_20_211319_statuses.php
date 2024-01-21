@@ -12,11 +12,13 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // создание таблицы Статусы
         Schema::create('statuses', function (Blueprint $table) {
             $table->id();
             $table->string('type_status');
         });
 
+        // добавление записей в таблицу
         DB::table('statuses')->insert([
             ['id' => '1', 'type_status' => 'Новое'],
             ['id' => '2', 'type_status' => 'Принято'],

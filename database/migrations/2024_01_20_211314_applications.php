@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // создание таблицы Заявки
         Schema::create('applications', function (Blueprint $table) {
             $table->id();
             $table->string('description');

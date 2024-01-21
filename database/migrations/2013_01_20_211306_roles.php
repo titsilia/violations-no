@@ -12,11 +12,13 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // создание таблицы Роли
         Schema::create('roles', function (Blueprint $table) {
             $table->id();
             $table->string('type_role');
         });
 
+        // добавление записей в таблицу
         DB::table('roles')->insert([
             ['id' => '1', 'type_role' => 'Администратор'],
             ['id' => '2', 'type_role' => 'Пользователь'],
