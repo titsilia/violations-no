@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model
 {
-    use HasFactory;
+     // обращаемся к нужным столбцам
+    protected $fillable = [
+        'id',
+        'type_role',
+    ];
 }

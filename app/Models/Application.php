@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Application extends Model
 {
-    use HasFactory;
+        // обращаемся к нужным столбцам
+        protected $fillable = [
+            'id',
+            'auto_number',
+            'description',
+            'patronymic',
+            'status_id',
+            'user_id',
+        ];
 }
